@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kubernetes - Home</title>
+    <link rel="icon" type="img/formating" href="./img/site-logo.ico">
     <link rel="stylesheet" href="./estilos/estilo.css">
 </head>
 <body>
@@ -11,16 +12,29 @@
         <h2>Menu</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Uma mera ilustração</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+	    <li><a href="indice.html">Índice de conteúdo</a></li>
         </ul>
     </section>
     <section id="container-conteudo">
-        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
-        <header>
-            <h1>Kubernetes</h1>
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral();">☰ Abrir Menu</button>
+	<header>
+            <h1>Home</h1>
         </header>
-        <main>
-            Bom dia
+        <main id="conteudo">
+		<p class="texto-formatado">Um texto contendo uma pesquisa de suma importância:</p>
+		<p class="texto-formatado">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum porttitor nibh vulputate malesuada. Pellentesque facilisis interdum arcu, id tempor neque. Ut a ligula at enim ullamcorper dictum vel eget augue. Quisque magna massa, scelerisque et suscipit sit amet, feugiat molestie elit. Suspendisse viverra, ante dignissim iaculis fringilla, nunc turpis accumsan felis, sed scelerisque nunc risus ac urna. Duis viverra justo quis nulla imperdiet, a accumsan felis maximus. Nunc interdum felis vitae augue dapibus auctor. Integer eget magna sed nisi rhoncus laoreet. 
+		</p>
+		<ul class="topicos">
+			<li>Ana</li>
+			<li>Arthur</li>
+			<li>Henzo</li>
+			<li>Pedro</li>
+			<li>Rafael</li>
+			<li>Samuel</li>
+		</ul>
+		<p class="referencia">Algum conteudo interessante. Alguém. Disponível em: algum lugar</p>
         </main>
     </section>
     <script src="./scripts/menu-lateral.js"></script>

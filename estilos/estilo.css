@@ -1,4 +1,6 @@
 
+/* INÍCIO ESTILOS BASE */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +10,6 @@
 html, body {
     width: 100vw;
     height: 100vh;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-}
-
 }
 
 body {
@@ -19,7 +17,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-main {
+#conteudo {
     margin: 40px auto;
     padding: 20px;
     background-color: #fff;
@@ -27,13 +25,12 @@ main {
 }
 
 #botao-menu {
+    margin-bottom: 20px;
     background-color: #5E83AE;
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    margin: 20px;
-    border-radius: 0%;
 }
 
 #botao-menu:hover {
@@ -45,22 +42,6 @@ main {
     width: 250px;
     position: fixed;
     left: -250px;
-    top: 0;
-    background-color: #2A2A2A;
-    transition: 0.5s;
-    padding-top: 20px;
-    z-index: 1000;
-    border: none;
-    box-shadow: none;
-}
-
-#menu-lateral h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#menu-lateral ul {
     background-color: #2A2A2A;
     overflow-x: hidden;
     transition: 0.5s;
@@ -77,19 +58,12 @@ main {
     padding: 0;
 }
 
-#menu-lateral li {
-    padding: 10px 20px;
-}
-
-#menu-lateral a {
-    display: block;
-}
-	
 #menu-lateral > ul > li {
     padding: 15px;
 }
 
 #menu-lateral a {
+    width: auto;
     padding: 10px;
     color: #F9F5ED;
     background-color: #5E83AE;
@@ -105,5 +79,38 @@ main {
     margin-left: 0;
     transition: margin-left 0.5s;
     padding: 20px;
-    width: 100%;
 }
+
+#container-conteudo > header {
+	background-color: #5E83AE;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+.topicos {
+	padding-left: 1.2%;
+}
+
+.topicos > li {
+	padding: 0.2%
+}
+
+.referencia {
+	padding: 0.3%;
+	text-align: left;
+}
+
+.texto-formatado, .topicos > li {
+	text-align: justify;
+}
+
+/* FIM ESTILOS BASE */
+/* Coloque os novos estilos abaixo disso */
+/* NAO MODIFIQUE OS ESTILOS ACIMA NEM ESTES COMENTARIOS
+
+
+
+
+
+
