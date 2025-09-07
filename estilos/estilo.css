@@ -109,8 +109,32 @@ body {
 /* Coloque os novos estilos abaixo disso */
 /* NAO MODIFIQUE OS ESTILOS ACIMA NEM ESTES COMENTARIOS */
 
+#botao-voltar {
+    margin-bottom: 20px;
+    background-color: #5E83AE;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
 
+#botao-voltar:hover {
+    background-color: #4C6E96;
+}
 
+.subtitulo {
+    padding: 1% 0;
+}
+
+.texto-formatado {
+    padding: 0.45% 0;
+}
+
+code {
+    padding: 2px;
+    background-color: lightgray;
+    font-size: 15.5px;
+}
 
 
 

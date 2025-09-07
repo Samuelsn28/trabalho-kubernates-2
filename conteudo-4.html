@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes - Operações e monitoramento</title>
+    <link rel="icon" type="img/formating" href="./img/site-logo.ico">
+    <link rel="stylesheet" href="./estilos/estilo.css">
+</head>
+<body>
+    <section id="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+            <li><a href="indice.html">Índice de conteúdo</a></li>
+        </ul>
+    </section>
+    <section id="container-conteudo">
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
+        <header>
+            <h1>Operações e monitoramento</h1>
+        </header>
+        <section id="conteudo">
+            <p class="texto-formatado">
+                Para usar Kubernates, é necessário saber inspecionar e manipular os recursos disponíveis
+                através do kubectl para resolver pendências, como problemas, por exemplo. Também é necessário que hajam formas
+                de observar os processos movidos pelo Kubernates, afim de detectar erros para que possam ser corrigidos, formas
+                essas como logs e métricas.
+            </p>
+
+            <h2 class="subtitulo">Comandos essenciais do kubectl</h2>
+            <p class="texto-formatado">
+                <code>kubectl get</code> -  Usado para mostrar recursos específicos, como pods, deployments, etc. Você pode especificar o formato (wide, yaml, json) com <code>-o</code>. Exemplo: <code>kubectl get pods -o wide</code> exibe informações de todos os pods existentes no atual namespace no formato wide.
+            </p>
+            <p class="texto-formatado">
+                <code>kubectl describe</code> -  Exibe informações detalhadas sobre um recurso. Útil para apurar falhas e suas causas e para descobrir o estado do recurso. Exemplo: <code>kubectl describe pods my-pod</code> mostra informações do pod <code>my-pod</code>.
+            </p>
+            <p class="texto-formatado">
+                <code>kubectl logs</code> -  Para realização de debugging, <code>kubectl logs</code> é muito útil. Esse comando exibe os logs de containers. Exemplo: <code>kubectl logs my-pod</code> expõe os logs do pod <code>my-pod</code>.
+            </p>
+            <p class="texto-formatado">
+                <code>kubectl exec</code> -  Executa um comando específico dentro de um container. Exemplo: <code>kubectl exec my-pod -c my-container -- ls</code> executa o comando <code>ls</code> para exibir arquivos do <code>my-container</code> localizado no pod <code>my-pod</code>. Use a opção <code>-it</code> para habilitar a sessão interativa.
+            </p>
+            <p class="texto-formatado">
+                <code>kubectl delete</code> -  Simplesmente deleta um recurso especificado. Exemplo: <code>kubectl delete pod my-pod</code> deleta o pod <code>my-pod</code>.
+            </p>
+
+            <h2 class="subtitulo">Ferramentas para monitoramento</h2>
+            <p class="texto-formatado">Os logs, por padrão, são escritos localmente nos diretórios <code>stdout</code> e <code>stderr</code>, sendo possível acessa-los através de <code>kubectl logs</code>. Mas para facilitar a leitura de logs e evitar problemas, é recomendável utilizar ferramentas e padrões, como:</p>
+            <p class="texto-formatado"><strong>Prometheus: </strong> coleta métricas em séries temporais. Não é muito útil para operar com logs brutos, mas é ideal para métricas e alertas.</p>
+            <p class="texto-formatado"><strong>Grafana: </strong> Monta dashboards, sendo, portanto, ótimo para visualização de informações a respeito da aplicação. Ela pode integrar outras ferramentas consigo, como o Prometheus, Loki, Elastic, etc.</p>
+            <p class="texto-formatado"><strong>EFK: </strong> não é apenas uma ferramenta, mas o conjunto de três ferramentas: Elasticsearch, Fluentd/Fluent Bit, Kibana; considerado um padrão para gerenciamento de logs. Essas três ferramentas trabalham em conjunto para processar e visualizar logs. É possível fazer algumas adaptações no padrão, como utilizar Loki (Grafana Loki) + Promtail, para uma operação mais leve e otimizada, e integrável ao Grafana.</p>
+            <p class="texto-formatado">Existem várias outras ferramentas e padrões úteis que podem ser combinados entre si. No entanto, os apresentados aqui são os principais e mais famosos.</p>
+        
+            <h2 class="subtitulo">Comando logs: um pouco mais</h2>
+            <p class="texto-formatado">Como dito anteriormente, para exibir os logs de um recurso, usa-se: <code>kubectl logs my-pod</code>, entretanto, esse comando possui alguns complementos de muito valor:</p>
+            <ul class="topicos">
+                <li>
+                    <code>-f:</code> Acompanha logs de um recurso específico em tempo real. Exemplo: <code>kubectl logs -f my-pod</code>.
+                </li>
+                <li>
+                    <code>-c:</code> Seleciona um container específico de um pod. Exemplo: <code>kubectl logs my-pod -c my-container</code>.
+                </li>
+                <li>
+                    <code>--previous:</code> Exibe os logs de um recurso anterior reiniciou ou caiu. Exemplo: <code>kubectl logs my-pod --previous</code>
+                </li>
+                <li>
+                    <code>--tail=[valor]:</code> Mostra uma quantidade específica de linhas de logs. Exemplo: <code>kubectl logs my-pod --tail=100</code> mostra as últimas 100 linhas.
+                </li>
+                <li>
+                    <code>--since=[valor]:</code> Expõe os logs das últimas horas especificadas. Exemplo: <code>kubectl logs my-pod --since=2h</code> exibe os logs da últimas 2 horas.
+                </li>
+            </ul>
+
+        </section>
+    </section>
+    <script src="./scripts/menu-lateral.js"></script>
+</body>
+</html>
