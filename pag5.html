@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Recursos - Kubernetes</title>
+  <link rel="stylesheet" href="./estilos/estilo.css">
+</head>
+<body>
+  <section id="container-conteudo">
+    <header>
+      <h1>Gerenciamento de Recursos</h1>
+    </header>
+    <main>
+      <h2>Definindo CPU e Memória para Containers</h2>
+      <p>No Kubernetes, os recursos de CPU e memória são definidos nos arquivos de configuração
+      (YAML), garantindo que cada container receba a quantidade necessária para executar suas
+      funções sem desperdício.</p>
+      <pre>
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+  limits:
+    memory: "512Mi"
+    cpu: "500m"
+      </pre>
+
+      <h2>Boas Práticas para Evitar Problemas de Performance</h2>
+      <ul>
+        <li>Definir limites e requisições adequadas para cada container.</li>
+        <li>Evitar definir valores muito baixos, prevenindo reinicializações constantes.</li>
+        <li>Monitorar o uso de recursos com ferramentas como Prometheus e Grafana.</li>
+        <li>Revisar periodicamente os valores configurados para otimizar o desempenho.</li>
+      </ul>
+    </main>
+  </section>
+  <div class="navegacao">
+  <button class="seta" onclick="window.location.href = 'proximo arquivo aqui';">&#8592;</button>
+  <button class="seta" onclick="window.location.href = 'proximo arquivo aqui';">&#8594;</button>
+</div>
+</body>
+</html>
