@@ -8,10 +8,20 @@
     <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body>
+    <section id="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+            <li><a href="indice.html">Índice de conteúdo</a></li>
+        </ul>
+    </section>
     <section id="container-conteudo">
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
         <header>
             <h1>Referências</h1>
         </header>
+        <button id="botao-voltar" onclick="window.location.href= 'conteudo-6.html';">
         <p id="referencias">
             <strong>Managed Kubernetes - Amazon Elastic Kubernetes Service (EKS) - AWS.</strong> <br>
             Disponível em: <a href="https://aws-amazon-com.translate.goog/eks/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=sge">https://aws-amazon-com.translate.goog/eks/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=sge</a> <br><br>
@@ -37,5 +47,6 @@
             Disponível em: <a href="https://cloud.google.com/kubernetes-engine?hl=pt-BR#:~:text=Experiência%20sem%20servidor%20do%20Kubernetes,disponíveis%20na%20edição%20GKE%20Enterprise.">https://cloud.google.com/kubernetes-engine?hl=pt-BR#:~:text=Experiência%20sem%20servidor%20do%20Kubernetes,disponíveis%20na%20edição%20GKE%20Enterprise.</a>
         </p>
     </section>
+    <script src="./scripts/menu-lateral.js"></script>
 </body>
 </html>
