@@ -8,10 +8,22 @@
     <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body>
+    <section id="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+            <li><a href="indice.html">Índice de conteúdo</a></li>
+        </ul>
+    </section>
     <section id="container-conteudo">
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
         <header>
             <h1>Referências</h1>
         </header>
+        <button id="botao-voltar" onclick="window.location.href= 'conteudo-4.html';">
+            &lt; Voltar
+        </button>
         <p id="referencias">
             <strong>HIREN DHADUK. Kubernetes Architecture and Components with Diagram.</strong> <br>
             Disponível em: <a href="https://www.simform.com/blog/kubernetes-architecture">https://www.simform.com/blog/kubernetes-architecture</a> <br><br>
