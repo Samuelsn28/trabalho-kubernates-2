@@ -108,6 +108,32 @@ body {
 /* FIM ESTILOS BASE */
 /* Coloque os novos estilos abaixo disso */
 /* NAO MODIFIQUE OS ESTILOS ACIMA NEM ESTES COMENTARIOS */
+ .navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+}
+
+.seta,
+.seta-desativada {
+    background-color: #415a77;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 6px;
+}
+
+.seta-desativada {
+    background-color: #868E97;
+}
+
+.seta:hover {
+    background-color: #778da9;
+}
 
 #botao-voltar {
     margin-bottom: 20px;
