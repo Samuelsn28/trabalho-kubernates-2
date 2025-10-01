@@ -148,7 +148,45 @@ body {
     background-color: #4C6E96;
 }
 
+.subtitulo {
+    padding: 1% 0;
+}
+
+.texto-formatado {
+    padding: 0.45% 0;
+}
+
+code {
+    padding: 2px;
+    background-color: lightgray;
+    font-size: 15.5px;
+}
 
 
-
+  .navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+  }
+  
+  .seta, .seta-desativada {
+    background-color: #415a77;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 6px;
+  }
+  
+  .seta-desativada {
+    background-color: #868E97;
+    cursor: default;
+  }
+  
+  .seta:hover {
+    background-color: #778da9;
+  }
 

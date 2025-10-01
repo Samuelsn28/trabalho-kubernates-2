@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes - Por que usar Kubernetes?</title>
+    <link rel="icon" type="img/formating" href="./img/site-logo.ico">
+    <link rel="stylesheet" href="./estilos/estilo.css">
+</head>
+<body>
+    <section id="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+            <li><a href="indice.html">Índice de conteúdo</a></li>
+        </ul>
+    </section>
+    <section id="container-conteudo">
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
+        <header>
+            <h1>Por que usar Kubernetes?</h1>
+        </header>
+        <section id="conteudo">
+            <h2 class="subtitulo">Utilidade</h2>
+            <ul class="topicos">
+                <li>
+                    É declarativa, ao invés de imperativa;
+                </li>
+                <li>
+                    Oferece a orquestração e gerenciamento que são necessários para implantar contêineres em escala para grandes cargas de trabalho, sendo ótimo para operar em um cenário de PaaS;
+                </li>
+                <li>
+                    Escalonável e dinâmico;
+                </li>
+                <li>
+                    Trabalha com "observação", sendo assim possível a auto-recuperação, processo no qual o Kubernetes resolve automaticamente falhas. Se um container cair, ele o reinicia ou o repõe com outro container. Ele também destrói containers que não estão corretamente operando.
+                </li>
+            </ul>
+            <h2 class="subtitulo">Vantagens</h2>
+            <ul class="topicos">
+                <li>
+                    Automatização operações com containers;
+                </li>
+                <li>
+                    Portabilidade, pode rodar localmente ou na nuvem;
+                </li>
+                <li>
+                    Auto-recuperação;
+                </li>
+                <li>
+                    Open source;
+                </li>
+                <li>
+                    Capacidade de escalonamento;
+                </li>
+                <li>
+                    Deploys mais rápidos e previsíveis, devido a sua forma declarativa
+                </li>
+                <li>
+                    Confiabilidade e adaptação
+                </li>
+            </ul>
+            <h2 class="subtitulo">Comparação com outras ferramentas</h2>
+            <p class="texto-formatado">
+                <strong>Docker:</strong> Arquiteturas diferentes. Enquanto o Docker trabalha apenas como uma plataforma de conteinerização, o Kubernates realiza a orquestração, ou seja, ele gerencia os containers e vários outros elementos incluídos em sua arquitetura. Vale ressaltar que o Docker opera apenas com um único host, já o Kubernates consegue trabalhar com vários. Kubernates pode ser destacado como "mais profissional" do que o Docker.
+            </p>
+            <p class="texto-formatado">
+                <strong>Docker Compose:</strong> Ambos realizam orquestração, contudo, Docker Compose, assim como o Docker, funciona apenas com um host, e é menos complexo. O Kubernates por sua vez pode funcionar com vários hosts, entretanto, é mais complexo, mas junto com essa complexidade, vem vários recursos muito úteis.
+            </p>
+            <p class="texto-formatado">
+                <strong>Docker Swarm:</strong> Semelhante ao Kubernates, mas menos complicado que o Kubernates, no entanto, Kubernates é mais poderoso. Kubernates acaba sendo mais completo e poderoso.
+            </p>
+            <div class="navegacao">
+              <button class="seta" onclick="window.location.href = 'conteudo-1.html';">&#8592;</button>
+              <button class="seta" onclick="window.location.href = 'conteudo-3.html';">&#8594;</button>
+            </div>
+            <button id="botao-voltar" onclick="window.location.href= 'referencias-2.html';"> Referências &gt;</button>
+        </section>
+    </section>
+    <script src="./scripts/menu-lateral.js"></script>
+</body>
+</html>
+
