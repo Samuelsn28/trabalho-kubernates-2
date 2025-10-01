@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes - Casos de Uso</title>
+    <link rel="icon" type="img/formating" href="./img/site-logo.ico">
+    <link rel="stylesheet" href="./estilos/estilo.css">
+</head>
+<body>
+    <section id="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+            <li><a href="indice.html">Índice de conteúdo</a></li>
+        </ul>
+    </section>
+    <section id="container-conteudo">
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral();">☰ Abrir Menu</button>
+        <header>
+            <h1>Casos de Uso</h1>
+        </header>
+        <section id="conteudo">
+            <section>
+                <h2 class="subtitulo">Casos de uso comuns</h2>
+                <ul class="topicos">
+                    <li>Arquiteturas de microserviços: Kubernetes facilita o desenvolvimento, a implantação e a escalabilidade de sistemas baseados em microserviços.</li>
+                    <li>Aplicações nativas em nuvem: Ideal para aplicações desenhadas para funcionar em ambientes de nuvem pública, privada ou híbrida.</li>
+                    <li>Gerenciamento de pipelines CI/CD: Permite automatizar o ciclo de vida de desenvolvimento de software.</li>
+                    <li>Ambientes híbridos e multicloud: Kubernetes permite a implantação de aplicações em múltiplos provedores de nuvem ou entre datacenters locais e a nuvem.</li>
+                </ul>
+            </section>
+            <div class="navegacao">
+                <button class="seta" onclick="window.location.href = 'conteudo-0.html';">&#8592;</button>
+                <button class="seta" onclick="window.location.href = 'conteudo-2.html';">&#8594;</button>
+            </div>
+            <button id="botao-voltar" onclick="window.location.href= 'referencias-1.html';"> Referências &gt;</button>
+        </section>
+    </section>
+    <script src="./scripts/menu-lateral.js"></script>
+</body>
+</html>
