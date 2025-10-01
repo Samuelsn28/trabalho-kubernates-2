@@ -162,6 +162,44 @@ code {
     font-size: 15.5px;
 }
 
+.navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+  }
+  
+  .seta, .seta-desativada {
+    background-color: #415a77;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 6px;
+  }
+  
+  .seta-desativada {
+    background-color: #868E97;
+  }
+  
+  .seta:hover {
+    background-color:#778da9;
+
+
+}
+
+#paragrafo3e6{
+    margin-bottom: 8px;
+}
+
+#referencias{
+    text-align: left;
+    font-size: 20px;
+}
+
+
 
   .navegacao {
     display: flex;

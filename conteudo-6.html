@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes - Kubernetes na nuvem</title>
+    <link rel="icon" type="img/formating" href="./img/site-logo.ico">
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <section id="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+            <li><a href="indice.html">Índice de conteúdo</a></li>
+        </ul>
+    </section>
+    <section id="container-conteudo">
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
+        <header>
+            <h1>Kubernetes na nuvem</h1>
+        </header>
+        <h2>Amazon EKS: Elastic Kubernetes Service</h2>
+        <p id="paragrafo3e6">
+        O EKS é um serviço gerenciado da Amazon Web Services (AWS) que permite com que o usuário execute Kubernetes nas nuvens, simplificando a criação, a proteção e a manuntenção de clusters do Kubernetes, podendo ser mais econômico fornecer recursos o suficiente para conseguir atender aos picos de demanda do que manter data centers próprios. O Amazon EKS tem 2 principais formas de ser abordado:
+        </p>
+        <ul id="lista-eks">
+            <li>
+                <p id="paragrafo3e6">
+                    Padrão do EKS: A AWS gerencia o ambiente de gerenciamento do Kubernetes quando o usuário cria um cluster de Kubernetes com o EKS, os programas que criam os "nós", gerenciam workloads, se integram à nuvem AWS e armazenam e escalam as informações do ambiente de gerenciamento para manter os clusters em execução gerenciados para o usuário automaticamente;
+                </p>    
+            </li>
+            <li>
+                <p id="paragrafo3e6">
+                    Modo automático do EKS: O EKS estende seu controle para gerenciar também os "nós" (Plano de dados do Kubernetes). Simplifica o gerenciamento do Kubernetes provisionando automaticamente a infraestrutura, selecionando as instâncias de computação ideais, escalando dinamicamente os recursos, otimizando continuamente os custos, aplicando patches aos sistemas operacionais e integrando-se aos serviços de segurança da AWS.
+                </p>
+            </li>
+        </ul>
+
+        Este serviço é bom não só por automatizar serviços containerizados, fornecendo vários beneficios ao usuário que decide usar a Amazon EKS, mas também fornece 'Add-Ons' junto da conta do usuário para ajuda-lo e fornecer mais serviços além do EKS, alguns desses são: Karpenter, Kube-proxy, CoreDNS entre outros.
+
+
+        <h2>AKS: Azure Kubernetes Service</h2>
+        <p>
+            O AKS é um serviço de gerenciamento de sistemas de contêineres. O que o diferencia de outros serviços semelhantes é a implementação de um plano de controle multilocatário, que potencialmente oferece melhor escalabilidade e utilização de recursos. No entanto, o fato de ser multilocatário pode levantar problemas de segurança para alguns usuários. O AKS usa o Azure Active Directory (AAD) para autenticação e autorização. <br>
+            Ele oferece uma abordagem mais simplificada para o gerenciamento de nós, que, comparada à de alguns outros serviços de Kubernetes, pode parecer menos granular. Ele utiliza a Azure Container Network Interface (ACI) por padrão, o que simplifica as configurações de rede dos pods. <br>
+            Ele se integra com os Azure Managed Disks (AMDs) para armazenamento persistente. Os AMDs oferecem um bom equilíbrio entre desempenho e custo. O AKS também apresenta suporte a outras soluções de armazenamento do Azure, como o Azure Files, para situações específicas. <br>
+            Adota uma abordagem mais automatizada para atualizações, com a opção de automatizar as atualizações para o plano de controle e "nós" de trabalho.
+        </p>
+
+        <h2>GKE: Google Kubernetes Engine</h2>
+        <p>
+            O GKE é um serviço oferecido pela plataforma Google Cloud. O GKE é construído na infraestrutura do Google Cloud, que fornece uma plataforma escalável, segura e altamente disponível para a execução de clusters. <br>
+            Ele oferece um recurso que o diferencia de outros serviços: a capacidade de escalar automaticamente o cluster de acordo com a carga de trabalho, reduzindo significativamente a sobrecarga de gerenciamento e eliminando a necessidade de escalar manualmente. O GKE suporta várias versões de Kubernetes, incluindo a versão estável mais recente. <br>
+            Além de todos os seus recursos, o GKE pode ser executado em dois modos:
+
+            <ul id="lista-gke">
+                <li>
+                    <p id="paragrafo3e6">
+                    Standard: O nível aonde o usuário mantém controle sobre toda a infraestrutura, podendo manipular o que for necessário em seu projeto; 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    Autopilot: modo de operação prática que gerencia a computação do cluster, permitindo que o usuário pague apenas pelos pods em execução, e não pela infraestrutura inutilizada. Isso pode gerar até 85% de economia para o usuário do GKE.
+                    </p>
+                </li>
+            </ul>
+        </p>
+        <div class="navegacao">
+            <button class="seta" onclick="window.location.href = 'conteudo-5.html';">&#8592;</button>
+            <button class="seta" onclick="window.location.href = 'conteudo-7.html';">&#8594;</button>
+        </div>
+        <button id="botao-voltar" onclick="window.location.href= 'referencias-6.html';"> Referências &gt;</button>
+    </section> 
+    <script src="./scripts/menu-lateral.js"></script>
+</body>
+</html>
