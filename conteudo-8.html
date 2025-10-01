@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhores Práticas</title>
+    <link rel="icon" type="img/formating" href="./img/site-logo.ico">
+    <link rel="stylesheet" href="./estilos/estilo.css">
+</head>
+<body>
+   <section id="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+            <li><a href="indice.html">Índice de conteúdo</a></li>
+        </ul>
+    </section>
+    <section id="container-conteudo">
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
+        <header>
+            <h1>Melhoras Práticas e Recursos</h1>
+        </header>
+        <main id="conteudo8">
+            <section>
+                <h2>Segurança</h2>
+                <p>
+                    As boas práticas de segurança no Kubernetes envolvem a implementação de controles de acesso com RBAC (Role-Based Access Control), garantindo que apenas usuários autorizados possam executar determinadas ações no cluster.
+                    Também é essencial adotar políticas de rede para segmentar e proteger o tráfego entre contêineres, além de verificar e assinar imagens para reduzir riscos de vulnerabilidades.
+                    A segurança deve ser aplicada em todas as camadas, desde o tempo de execução até o pipeline de desenvolvimento, e o cluster precisa ser mantido sempre atualizado com a versão mais recente do Kubernetes.
+                </p>
+            </section>
+            <section>
+                <h2>Eficiência</h2>
+                <p>
+                    No quesito eficiência, o Kubernetes deve ser utilizado como ferramenta de orquestração para automatizar implantações, escalabilidade e gerenciamento de aplicações containerizadas.
+                    A automação também deve estar presente nos processos de atualização e recuperação de falhas, tornando o ambiente mais resiliente.
+                    O monitoramento contínuo é igualmente importante, pois permite otimizar o uso dos recursos e identificar gargalos que possam comprometer a performance.
+                </p>
+            </section>
+            <section>
+                <h2>Custos</h2>
+                <p>
+                    Do ponto de vista de custos, o gerenciamento adequado dos recursos de CPU e memória é essencial para evitar desperdícios de infraestrutura.
+                    Configurações definidas nos arquivos YAML asseguram que cada contêiner receba apenas a quantidade necessária para executar suas funções.
+                    Além disso, revisar e ajustar periodicamente os recursos é uma forma de otimizar gastos operacionais e melhorar o desempenho geral do cluster.
+                </p>
+            </section>
+            <section>
+                <h2>Gerenciamento de Recursos</h2>
+                <p>
+                    No Kubernetes, a definição de recursos como CPU e memória é feita nos arquivos YAML. Essa prática garante que cada contêiner tenha a quantidade necessária para desempenhar suas funções sem comprometer a infraestrutura.
+                    Limites e requisições bem configurados ajudam a manter o ambiente estável e eficiente, enquanto valores muito baixos podem levar a reinicializações constantes.
+                    O monitoramento com ferramentas como Prometheus e Grafana auxilia no acompanhamento do consumo, e a revisão periódica dessas configurações evita problemas de performance, resultando em aplicações mais estáveis.
+                </p>
+            </section>
+            <footer>
+                
+                 <div class="navegacao">
+                    <button class="seta" onclick="window.location.href = 'conteudo-7.html';">&#8592;</button>
+                    <button class="seta-desativada">&#8594;</button>
+                </div>
+                 <button id="botao-voltar" onclick="window.location.href= 'referencias8.html';"> Referências &gt;</button>
+            </footer>
+            <script src="./scripts/menu-lateral.js"></script>      
+        </main>
+    </section>
+</body>
+</html>

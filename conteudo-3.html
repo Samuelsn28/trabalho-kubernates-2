@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitetura de Kubernetes</title>
+    <link rel="icon" type="img/formating" href="./img/site-logo.ico">
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <section id="menu-lateral">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="criadores.html">Criadores</a></li>
+            <li><a href="indice.html">Índice de conteúdo</a></li>
+        </ul>
+    </section>
+    <section id="container-conteudo">
+        <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
+        <header>
+            <h1>Arquitetura dos Kubernetes</h1>
+        </header>
+        <h2>Componentes principais</h2>
+        <ul id="lista-componentes">
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>API Server:</strong> O servidor API ou kube-apiserver, é o principal componente central do plano de controle dos kubernetes, funcionando como front-end para o cluster de kubernetes, expondo a API dos kubernetes, permitindo que os usuários, componentes externos e outras partes do cluster de kubernetes consigam interagir e comunicar entre si. Além disso, o Server API tem várias outras funções, as quais são a validação e configuração, Autenticação e autorização, controle de admissão e entre outros que o API pode fazer pelo usuário, ajudando muito em seu projeto.
+                </p>    
+            </li>
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>etcd:</strong> É um sistema de armazenamento de chave-valor distribuído e de código aberto que funciona como um sistema de backup para todos os dados do cluster no Kubernetes. Ele armazena todo o estado do cluster, incluindo seus dados de estado, que representam o estado desejado e real de todos os objetos do Kubernetes, como Pods, implantações, serviços e namespaces. Ele também armazena metadados, ou seja, dados sobre os vários componentes e recursos dentro do cluster. Há várias razões para se ter o etcd no sistema de Kubernetes, como a garantia de consistência, que assegura que todas as leituras de dados retornem as informações mais recentes e precisas. Normalmente, ele é implantado em uma configuração de alta disponibilidade, que, em geral, tem três ou mais nós, para evitar pontos únicos de falha e garantir a operação contínua, mesmo em caso de problemas em nós ou na rede.
+                </p>
+            </li>
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>Scheduler:</strong> Responsável por decidir em qual nó cada novo Pod deve ser executado. Considerando diversos fatores como a disponibilidade de recursos (CPU, RAM, etc), restrições de hardware e software, políticas de afinidade e a localização de dados para encontrar o  nó mais adequado para o Pod. Caso nenhum nó for adequado para o Pod, o Pod ficará no estado "Pendente" até que o cluster mude para que um nó seja viável para ele. Outras coisas que o Scheduler pode fazer pelo usuário é identificar Pods recém-criados que ainda não foram colocados em um nó, filtrar nós que não atendem os requisitos de um Pod, rankear nós baseado em um conjunto de funções para classificar cada um deles.
+                </p>
+            </li>
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>Controller Manager:</strong> Processo central que executa vários controladores para mantes o estado desejado do cluster, garantindo que ele corresponda à configuração declarativa desejada. Ele funciona como um ciclo de controle continuo, monitorando o estado atual e o desejado, como a criação de novos pods ou a reinicialização de serviços falhas, ele funciona sempre observando o estado dos recursos do cluster, fazendo comparações com o estado atual e o estado definido na configuração declarativa do cluster.
+                </p>
+            </li>
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>Deployment:</strong> é um objeto que descreve o estado desejado de uma aplicação, sendo responsável por gerenciar e automatizar a implantação, a atualização e o escalonamento de aplicações em contêineres. Ele permite que o usuário defina quantas cópias de um Pod devem estar em execução, suas principais funcionalidades são: Implantação Declarativa, O usuário define como sua aplicação deve ser em um arquivo e o kubernetes garante que o estado atual corresponda ao estado desejado; Atualizações e Rollbacks, permitem atualizações suaves, onde novas versões dos Pods são introduzidas gradualmente enquanto as antigas são encerradas, minimizando o tempo de inatividade, se algo acabar dando o errado, o usuário pode reverter para uma versão anterior da aplicação. O Deployment não é só importante por causa de sua automação, mas também pela sua flexibilidade e sua confiabilidade.
+                </p>
+            </li>
+        </ul>
+
+        <h2>Componentes dos Nós (Workers)</h2>
+         <ul id="lista-componentes-nodes">
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>Kubelet:</strong> É um agente que roda em cada nó do cluster e é responsável por garantir  que os contêineres especificados num Pod estejam a ser executados e geridos corretamente, servindo como intermediário, comunicando o estado dos nós para o plano de controle e executando as instruções do mesmo, como a criação ou remoção de contêineres, conforme a necessidade. O Kubelet tem diversas funções, mas entre as mais importante temos: Orquestração de Contêineres, trabalhando para garantir que os contêineres especificados estejam em execução e que seus estados correspondam às especificações definidas; Monitoramento de Pods, o Kubelet se comunica com o servidor API do plano de controle para receber comandos e informações sobre os Pods a serem executados.
+                </p>    
+            </li>
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>Container Runtime:</strong> Software responsável por executar e gerenciar o ciclo de vida dos contêineres em um nó de cluster, também é o responsável por iniciar, para e monitorar os contêineres e as aplicações dentro deles. Para permitir a flexibilidade e a integração com diferentes ambientes de execução, o Kubernetes usa a Container Runtime Interface (CRI), um plugin que permite que o Kubelet se comunique com diversos runtimes. O Controller Runtime executa contêineres, mais especificamente imagens de contêiner, que são arquivos executáveis que empacotam uma aplicação e suas depêndencias, isolando-as do sistema operacional, também ela faz o isolamento de recursos de computação, ele gerencia o isolamento da CPU, memória e armazenamento entre diferentes contêineres, garantindo que os pods sejam executados corretamente.
+                </p>
+            </li>
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>Kube-proxy:</strong> É um componente essencial do Kubernetes que executa em cada nó de cluster, atuando como proxy de rede para gerenciar a comunicação entre os Pods e os serviços. Monitora as mudanças nos objetos de serviço, traduzindo-as em regras de rede para direcionar o trafégo de forma eficiente para os Pods corretos, garantindo o balanceamento de carga e a descoberta de serviços dentro do Cluster. Suas funções podem varias, mas as que mais são usadas são: Serviço de Rede, facilita a criação de serviços que fornecem um endereço IP e um nome DNS estáveis para grupos de Pods; Balanceamento de carga, distribui o trafégo destinado a um serviço ebtre os vários Pods que o implementam, assegurando que a carga de trabalho seja equilibrada.
+                </p>
+            </li>
+            <li>
+                <p id="paragrafo3e6">
+                    <strong>Pods:</strong> É a menor unidade implantável e gerenciável, composta por um ou mais contêineres que compartilham recursos como rede e armazenamento. Ele funciona como um host isolado e possui um endereço IP único, permitindo com que os contêineres dentro dele se comuniquem facilmente, como se estivessem na mesma máquina visual. Suas características principais são o seu agrupamento de contêineres podendo conter um ou mais contêineres que trabalham juntos para realizar um objetivo comum; Recursos compartilhados, todos os contêineres partilham do mesmo IP, as mesmas portas de rede e volumes de armazenamento, o que simplifica muito a comunicação e o gerenciamento; Unidade Atómica, um Pod é a parte mais básica da implementação, se um Pod falhar, o Kubernetes pode criar automaticamente uma nova réplica para manter a aplicação funcionand.
+                </p>
+            </li>
+        </ul>
+        
+        <div class="navegacao">
+            <button class="seta" onclick="window.location.href = 'conteudo-2.html';">&#8592;</button>
+            <button class="seta" onclick="window.location.href = 'conteudo-4.html';">&#8594;</button>
+        </div>
+        <button id="botao-voltar" onclick="window.location.href= 'referencias-3.html';"> Referências &gt;</button>
+    </section> 
+    <script src="./scripts/menu-lateral.js"></script>
+</body>
+</html>
