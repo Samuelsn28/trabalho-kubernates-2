@@ -143,9 +143,111 @@ main {
   text-decoration: underline;
 }
 
+/* FIM ESTILOS BASE */
+/* Coloque os novos estilos abaixo disso */
+/* NAO MODIFIQUE OS ESTILOS ACIMA NEM ESTES COMENTARIOS */
+ .navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+}
+
+.seta,
+.seta-desativada {
+    background-color: #415a77;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 6px;
+}
+
+.seta-desativada {
+    background-color: #868E97;
+}
+
+.seta:hover {
+    background-color: #778da9;
+}
+
+#botao-voltar {
+    margin-bottom: 20px;
+    background-color: #5E83AE;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#botao-voltar:hover {
+    background-color: #4C6E96;
+}
+
+.subtitulo {
+    padding: 1% 0;
+}
+
+.texto-formatado {
+    padding: 0.45% 0;
+}
+
+code {
+    padding: 2px;
+    background-color: lightgray;
+    font-size: 15.5px;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+  }
+  
+  .seta, .seta-desativada {
+    background-color: #415a77;
+    color: white;
+    border: none;
+    padding: 10px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 6px;
+  }
+  
+  .seta-desativada {
+    background-color: #868E97;
+  }
+  
+  .seta:hover {
+    background-color:#778da9;
+
+
+}
+
+#paragrafo3e6{
+    margin-bottom: 8px;
+}
+
+#referencias{
+    text-align: left;
+    font-size: 20px;
+}
+
 #referencias8 .referencia a:hover {
   color: #0d47a1;
 }
+
+  .navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+  }
+
 #conteudo8 > section {
     margin-bottom: 32px;
 }
@@ -170,41 +272,3 @@ main {
     color: #1976d2;
     text-decoration: underline;
 }
-.navegacao {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 20px;
-  }
-  
-  .seta, .seta-desativada {
-    background-color: #415a77;
-    color: white;
-    border: none;
-    padding: 10px 28px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 6px;
-  }
-  
-  .seta-desativada {
-    background-color: #868E97;
-  }
-  
-  .seta:hover {
-    background-color: #778da9;
-  }
-  #botao-voltar {
-    margin-bottom: 20px;
-    background-color: #5E83AE;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-#botao-voltar:hover {
-    background-color: #4C6E96;
-}
-
