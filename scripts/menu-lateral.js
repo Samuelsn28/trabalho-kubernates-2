@@ -1,6 +1,7 @@
 
 const sidebar = document.getElementById("menu-lateral");
 const content = document.getElementById("container-conteudo");
+var menuLateralEstaOculto = true;
 
 function abreMenuLateral() {
     sidebar.style.left = "0";
@@ -12,14 +13,12 @@ function fechaMenuLateral() {
     content.style.marginLeft = "0";
 }
 
-function menuLateralEstaOculto() {
-    return sidebar.style.left === "-250px";
-}
 
 function alteraVisibilidadeMenuLateral() {
-    if (menuLateralEstaOculto()) {
+    if (menuLateralEstaOculto) {
         abreMenuLateral();
     } else {
         fechaMenuLateral();
     }
+    menuLateralEstaOculto = !menuLateralEstaOculto;
 }

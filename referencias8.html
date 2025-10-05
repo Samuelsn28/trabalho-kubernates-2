@@ -3,46 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerenciamento de Recursos - Kubernetes</title>
+  <title>Kubernetes - Referências</title>
   <link rel="icon" type="img/formating" href="./img/site-logo.ico">
   <link rel="stylesheet" href="./estilos/estilo.css">
 </head>
 <body>
+  <section id="menu-lateral">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="criadores.html">Criadores</a></li>
+      <li><a href="indice.html">Índice de conteúdo</a></li>
+    </ul>
+  </section>
+
   <section id="container-conteudo">
+    <button id="botao-menu" onclick="alteraVisibilidadeMenuLateral()">☰ Abrir Menu</button>
     <header>
       <h1>Referências</h1>
     </header>
-    <main>
+
+    <section id="conteudo">
       <button id="botao-voltar" onclick="window.location.href= 'conteudo-8.html';">&lt; Voltar</button>
       <article id="referencias8">
-        <h2 >
-          Fontes Consultadas
-        </h2>
         <p class="referencia">
         Práticas Recomendadas de Segurança em Kubernetes. Red Hat. Disponível em: 
-        <a href="https://www.redhat.com/pt-br/topics/containers/kubernetes-security-best-practices" target="_blank">
             https://www.redhat.com/pt-br/topics/containers/kubernetes-security-best-practices
-        </a>. 
-        Acesso em: 06 set. 2025.
         </p>
 
         <p class="referencia">
         Kubernetes Documentation. Overview of Configuration. Disponível em: 
-        <a href="https://kubernetes.io/pt-br/docs/concepts/configuration/overview/" target="_blank">
             https://kubernetes.io/pt-br/docs/concepts/configuration/overview/
-        </a>. 
-        Acesso em: 06 set. 2025.
         </p>
 
         <p class="referencia">
         Segurança em Kubernetes: melhores práticas. Infomach. Disponível em: 
-        <a href="https://www.infomach.com.br/seguranca-kubernetes-melhores-praticas/" target="_blank">
             https://www.infomach.com.br/seguranca-kubernetes-melhores-praticas/
-        </a>. 
-        Acesso em: 06 set. 2025.
         </p>
       </article>
-    </main>
+    </section>
   </section>
+
+  <script src="./scripts/menu-lateral.js"></script>
 </body>
 </html>
